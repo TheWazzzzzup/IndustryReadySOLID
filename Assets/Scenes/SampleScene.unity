@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 690226847}
   - component: {fileID: 690226851}
   - component: {fileID: 690226852}
+  - component: {fileID: 690226853}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -863,8 +864,8 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
+  m_Interpolate: 1
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &690226852
 MonoBehaviour:
@@ -878,6 +879,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515a9f9adb985a54aa4cb93de8054677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &690226853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690226846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43d19e4a0d5061498f96faaa6c12764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 690226851}
+  velocityMultiplier: 20
+  accelerationDamp: 0.25
+  decelerationDamp: 0.2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

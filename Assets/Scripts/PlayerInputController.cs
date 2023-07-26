@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterController : MonoBehaviour
+public class PlayerInputController : MonoBehaviour, IHandleTheInput
 {
     public CustomInput input;
 
-    Vector3 movementVector = Vector3.zero;
+    Vector3 movementVector;
+
+    Vector3 IHandleTheInput.MovementVector { get => movementVector; }
 
     private void Awake()
     {
