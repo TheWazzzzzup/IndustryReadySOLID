@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.TextCore.LowLevel;
 
 [RequireComponent(typeof(ICheckSurrounding))]
 public class ObjectSurroundingSolver : MonoBehaviour , IHandleSurroundingInteractions
 {
     ICheckSurrounding surroundingChecker;
-  
+
+    GameObject firstInteractedObject;
+
     private void Awake()
     {
         surroundingChecker = GetComponent<ICheckSurrounding>();
@@ -16,10 +18,7 @@ public class ObjectSurroundingSolver : MonoBehaviour , IHandleSurroundingInterac
     public void HandleSurroundingInteraction()
     {
         surroundingChecker.CheckSurroundings();
-        foreach (GameObject go in surroundingChecker.surroundingGO)
-        {
-            // Add Action to the game object
-        }
+        // Todo : enter logic of the player
     }
 
 }
