@@ -28,11 +28,6 @@ public class PlayerInputController : MonoBehaviour, IHandleTheInput
         input.Player.Movement.canceled -= OnMovementCanclled;
     }
 
-    private void FixedUpdate()
-    {
-        Debug.Log(movementVector);
-    }
-
     private void OnMovementPreformed(InputAction.CallbackContext value)
     {
         movementVector = value.ReadValue<Vector3>();
