@@ -18,7 +18,15 @@ public class ObjectSurroundingSolver : MonoBehaviour , IHandleSurroundingInterac
     public void HandleSurroundingInteraction()
     {
         surroundingChecker.CheckSurroundings();
-        // Todo : enter logic of the player
+        if (surroundingChecker.surroundingGO.Count > 0)
+        {
+            firstInteractedObject = surroundingChecker.surroundingGO[0];
+            if (firstInteractedObject.TryGetComponent<IHoldIdentity>(out IHoldIdentity identityHolder))
+            {
+                Debug.Log($"Hey my name is {identityHolder.DataHolder.Name}" +
+                    $" , My output is {identityHolder.DataHolder.Output} units per sec");
+            }
+        }
     }
 
 }
