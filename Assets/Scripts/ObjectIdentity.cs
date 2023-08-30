@@ -6,10 +6,10 @@ public class ObjectIdentity : MonoBehaviour , IHoldIdentity
 {
     [SerializeField] IdentityData identityData;
 
-    public IHoldData DataHolder => identityData;
+    public IHoldIdentityData DataHolder => identityData;
 }
 
 public interface IHoldIdentity
 {
-    public IHoldData DataHolder { get; }
+    public IHoldIdentityData DataHolder { get; }
 }

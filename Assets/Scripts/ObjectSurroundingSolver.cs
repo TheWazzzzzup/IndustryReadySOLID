@@ -14,7 +14,12 @@ public class ObjectSurroundingSolver : MonoBehaviour , IHandleSurroundingInterac
     {
         surroundingChecker = GetComponent<ICheckSurrounding>();
     }
-    
+
+    private void Update()
+    {
+        HandleSurroundingInteraction();
+    }
+
     public void HandleSurroundingInteraction()
     {
         surroundingChecker.CheckSurroundings();
